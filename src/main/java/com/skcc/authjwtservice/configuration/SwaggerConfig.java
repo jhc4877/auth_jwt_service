@@ -6,6 +6,9 @@ import java.util.Optional;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import com.google.common.base.Predicates;
 
@@ -22,7 +25,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @Configuration
 @EnableSwagger2
-public class SwaggerConfig {
+public class SwaggerConfig implements WebMvcConfigurer {
 
 	@Bean
 	public Docket api() {
@@ -40,6 +43,22 @@ public class SwaggerConfig {
 				"This is a sample JWT authentication service. You can find out more about JWT at [https:jwt.io/](https:jwt.io/). For this sample, you can use the `admin` or `client` users (password: admin and client respectively) to test the authorization filters. Once you have successfully logged in and obtained the token, you should click on the right top button `Authorize` and introduce it with the prefix \"Bearer \".")
 				.version("1.0.0").license("MIT License").licenseUrl("http:opensource.org/licenses/MIT")
 				.contact(new Contact(null, null, "mauriurraco@gmail.com")).build();
+	}
+
+	@Override
+	public void addViewControllers(ViewControllerRegistry registry) {
+		registry.addRedirectViewController("/users/swagger/v2/api-docs", "/v2/api-docs");
+		registry.addRedirectViewController("/users/swagger/swagger-resources", "/swagger-resources");
+		registry.addRedirectViewController("/users/swagger/swagger-resources/configuration/ui", "/swagger-resources/configuration/ui");
+		registry.addRedirectViewController("/users/swagger/swagger-resources/configuration/security", "/swagger-resources/configuration/security");		
+		registry.addRedirectViewController("/users/swagger", "/users/swagger/swagger-ui.html");
+		registry.addRedirectViewController("/users/swagger/", "/users/swagger/swagger-ui.html");
+
+	}
+
+	@Override
+	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+		registry.addResourceHandler("/users/swagger/**").addResourceLocations("classpath:/META-INF/resources/");
 	}
 
 }

@@ -20,14 +20,17 @@ public class UserResponseDTO {
 	private String email;
 
 	@ApiModelProperty(position = 3)
-	List<Role> roles;
+	private String name;
 
 	@ApiModelProperty(position = 4)
-	private String city;
+	List<Role> roles;
 
 	@ApiModelProperty(position = 5)
-	private Float lon;
+	private String city;
 
 	@ApiModelProperty(position = 6)
+	private Float lon;
+
+	@ApiModelProperty(position = 7)
 	private Float lat;
 }

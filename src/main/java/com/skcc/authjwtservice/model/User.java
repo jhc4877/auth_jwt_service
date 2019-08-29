@@ -30,6 +30,9 @@ public class User {
 
 	@Size(min = 8, message = "Minimum password length: 8 characters")
 	private String password;
+	
+	@Column(unique = false, nullable = false)
+	private String name;
 
 	@ElementCollection(fetch = FetchType.EAGER)
 	List<Role> roles;

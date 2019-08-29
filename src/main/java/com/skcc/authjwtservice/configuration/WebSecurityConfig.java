@@ -37,9 +37,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
 		http.authorizeRequests().requestMatchers(CorsUtils::isPreFlightRequest).permitAll()
-				.antMatchers("/users/swagger").permitAll().antMatchers("/users/signin").permitAll()
+				.antMatchers("/users/swagger/**/**").permitAll().antMatchers("/users/signin").permitAll()
 				.antMatchers("/users/signup").permitAll().antMatchers("/h2-console/**/**").permitAll().anyRequest()
-				.authenticated();
+				.authenticated().and().cors().and();
 
 		http.exceptionHandling().accessDeniedPage("/login");
 
@@ -49,6 +49,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	public void configure(WebSecurity web) throws Exception {
 		web.ignoring().antMatchers("/v2/api-docs").antMatchers("/swagger-resources/**").antMatchers("/swagger-ui.html")
+				.antMatchers("/users/swagger/v2/api-docs").antMatchers("/users/swagger/swagger-resources/**").antMatchers("/users/swagger/swagger-ui.html")
+				.antMatchers("/users/swagger/configuration/**").antMatchers("/users/swagger/webjars/**")
 				.antMatchers("/configuration/**").antMatchers("/webjars/**").antMatchers("/public").and().ignoring()
 				.antMatchers("/h2-console/**/**");
 	}

@@ -1,7 +1,6 @@
 package com.skcc.authjwtservice.controller;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -93,12 +92,6 @@ public class UserController {
 	@PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_CLIENT')")
 	public String refresh(HttpServletRequest req) {
 		return userService.refresh(req.getRemoteUser());
-	}
-
-	@GetMapping("/swagger")
-	public void swaggerRedirect(HttpServletResponse response) {
-		response.setHeader("Location", "/swagger-ui.html");
-		response.setStatus(302);
 	}
 
 }
