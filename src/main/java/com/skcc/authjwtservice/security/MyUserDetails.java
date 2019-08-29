@@ -1,4 +1,4 @@
-package com.skcc.authjwtsevice.security;
+package com.skcc.authjwtservice.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -6,8 +6,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.skcc.authjwtsevice.model.User;
-import com.skcc.authjwtsevice.repository.UserRepository;
+import com.skcc.authjwtservice.model.User;
+import com.skcc.authjwtservice.repository.UserRepository;
 
 @Service
 public class MyUserDetails implements UserDetailsService {

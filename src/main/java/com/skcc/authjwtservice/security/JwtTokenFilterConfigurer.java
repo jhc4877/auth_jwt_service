@@ -1,4 +1,4 @@
-package com.skcc.authjwtsevice.security;
+package com.skcc.authjwtservice.security;
 
 import org.springframework.security.config.annotation.SecurityConfigurerAdapter;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

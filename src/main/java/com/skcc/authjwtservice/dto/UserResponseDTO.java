@@ -1,8 +1,8 @@
-package com.skcc.authjwtsevice.dto;
+package com.skcc.authjwtservice.dto;
 
 import java.util.List;
 
-import com.skcc.authjwtsevice.model.Role;
+import com.skcc.authjwtservice.model.Role;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

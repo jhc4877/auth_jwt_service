@@ -1,4 +1,4 @@
-package com.skcc.authjwtsevice.controller;
+package com.skcc.authjwtservice.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.skcc.authjwtsevice.dto.UserDataDTO;
-import com.skcc.authjwtsevice.dto.UserResponseDTO;
-import com.skcc.authjwtsevice.model.User;
-import com.skcc.authjwtsevice.service.UserService;
+import com.skcc.authjwtservice.dto.UserDataDTO;
+import com.skcc.authjwtservice.dto.UserResponseDTO;
+import com.skcc.authjwtservice.model.User;
+import com.skcc.authjwtservice.service.UserService;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

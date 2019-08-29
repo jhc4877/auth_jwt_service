@@ -1,4 +1,4 @@
-package com.skcc.authjwtsevice.configuration;
+package com.skcc.authjwtservice.configuration;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -14,8 +14,8 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import com.skcc.authjwtsevice.security.JwtTokenFilterConfigurer;
-import com.skcc.authjwtsevice.security.JwtTokenProvider;
+import com.skcc.authjwtservice.security.JwtTokenFilterConfigurer;
+import com.skcc.authjwtservice.security.JwtTokenProvider;
 
 @Configuration
 @EnableWebSecurity

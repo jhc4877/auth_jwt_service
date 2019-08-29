@@ -1,4 +1,4 @@
-package com.skcc.authjwtsevice.configuration;
+package com.skcc.authjwtservice.configuration;
 
 import java.util.ArrayList;
 import java.util.Arrays;

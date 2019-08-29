@@ -1,4 +1,4 @@
-package com.skcc.authjwtsevice.security;
+package com.skcc.authjwtservice.security;
 
 import java.util.Base64;
 import java.util.Date;
@@ -18,8 +18,8 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
-import com.skcc.authjwtsevice.exception.CustomException;
-import com.skcc.authjwtsevice.model.Role;
+import com.skcc.authjwtservice.exception.CustomException;
+import com.skcc.authjwtservice.model.Role;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtException;

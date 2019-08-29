@@ -1,4 +1,4 @@
-package com.skcc.authjwtsevice.service;
+package com.skcc.authjwtservice.service;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -10,10 +10,10 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.skcc.authjwtsevice.exception.CustomException;
-import com.skcc.authjwtsevice.model.User;
-import com.skcc.authjwtsevice.repository.UserRepository;
-import com.skcc.authjwtsevice.security.JwtTokenProvider;
+import com.skcc.authjwtservice.exception.CustomException;
+import com.skcc.authjwtservice.model.User;
+import com.skcc.authjwtservice.repository.UserRepository;
+import com.skcc.authjwtservice.security.JwtTokenProvider;
 
 @Service
 public class UserService {

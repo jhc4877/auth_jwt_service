@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.skcc</groupId>
-	<artifactId>auth-jwt-sevice</artifactId>
+	<artifactId>auth-jwt-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>auth-jwt-sevice</name>
+	<name>auth-jwt-service</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

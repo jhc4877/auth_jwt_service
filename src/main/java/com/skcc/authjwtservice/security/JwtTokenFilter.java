@@ -1,4 +1,4 @@
-package com.skcc.authjwtsevice.security;
+package com.skcc.authjwtservice.security;
 
 import java.io.IOException;
 
@@ -11,7 +11,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import com.skcc.authjwtsevice.exception.CustomException;
+import com.skcc.authjwtservice.exception.CustomException;
 
 public class JwtTokenFilter extends OncePerRequestFilter {
 

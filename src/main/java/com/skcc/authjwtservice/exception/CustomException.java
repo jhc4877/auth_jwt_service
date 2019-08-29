@@ -1,4 +1,4 @@
-package com.skcc.authjwtsevice.exception;
+package com.skcc.authjwtservice.exception;
 
 import org.springframework.http.HttpStatus;
 

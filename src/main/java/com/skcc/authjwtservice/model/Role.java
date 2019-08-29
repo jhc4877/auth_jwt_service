@@ -1,4 +1,4 @@
-package com.skcc.authjwtsevice.model;
+package com.skcc.authjwtservice.model;
 
 import org.springframework.security.core.GrantedAuthority;
 

@@ -1,4 +1,4 @@
-package com.skcc.authjwtsevice.model;
+package com.skcc.authjwtservice.model;
 
 import java.util.List;
 
@@ -13,8 +13,8 @@ import javax.validation.constraints.Size;
 
 import lombok.Data;
 
-@Entity
 @Data
+@Entity
 public class User {
 
   @Id
