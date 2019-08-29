@@ -16,14 +16,14 @@ import com.skcc.authjwtservice.service.UserService;
 
 @SpringBootApplication
 public class AuthJwtSeviceApplication implements CommandLineRunner {
-	
+
 	@Autowired
 	private UserService userService;
 
 	public static void main(String[] args) {
 		SpringApplication.run(AuthJwtSeviceApplication.class, args);
 	}
-	
+
 	@Bean
 	public ModelMapper modelMapper() {
 		return new ModelMapper();
@@ -32,21 +32,21 @@ public class AuthJwtSeviceApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		User admin = new User();
-	    admin.setUsername("admin");
-	    admin.setPassword("admin");
-	    admin.setEmail("admin@email.com");
-	    admin.setRoles(new ArrayList<Role>(Arrays.asList(Role.ROLE_ADMIN)));
+		admin.setUsername("admin");
+		admin.setPassword("admin");
+		admin.setEmail("admin@email.com");
+		admin.setRoles(new ArrayList<Role>(Arrays.asList(Role.ROLE_ADMIN)));
 
-	    userService.signup(admin);
+		userService.signup(admin);
 
-	    User client = new User();
-	    client.setUsername("client");
-	    client.setPassword("client");
-	    client.setEmail("client@email.com");
-	    client.setRoles(new ArrayList<Role>(Arrays.asList(Role.ROLE_CLIENT)));
+		User client = new User();
+		client.setUsername("client");
+		client.setPassword("client");
+		client.setEmail("client@email.com");
+		client.setRoles(new ArrayList<Role>(Arrays.asList(Role.ROLE_CLIENT)));
 
-	    userService.signup(client);
-		
+		userService.signup(client);
+
 	}
 
 }
